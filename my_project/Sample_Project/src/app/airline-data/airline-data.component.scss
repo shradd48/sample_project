@@ -1,0 +1,38 @@
+@import '../../colour-code.scss';
+
+.center-container {
+  margin: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  font-size: 40px;
+  color: $darkblue;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 800px;
+}
+
+.card {
+  border: 1px solid $gray;
+  background-color: $blue;
+  text-align: center;
+  color: $white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px $blur;
+  cursor: pointer;
+  margin: 10px;
+  padding: 20px;
+
+  .card-content {
+    padding: 25px;
+  }
+
+  .card-title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+}

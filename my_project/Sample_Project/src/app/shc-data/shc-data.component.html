@@ -1,0 +1,40 @@
+<div *ngIf="isOpen" class="modal">
+  <div class="modal-content">
+    <!-- Title Bar with Cross Button -->
+    <div class="title-bar"> SHC
+      <button class="close-button" (click)="closeModal()"><i class="fa fa-close"></i></button>
+    </div>
+    <!-- Search Bar -->
+    <div class="search-bar">
+      <i class="fa fa-search"></i>
+      <!-- search logic not on search input field  -->
+      <input type="text" placeholder="Search" class="search-input" [(ngModel)]="searchTerm" (input)="onSearch()">
+      <!-- search logic on search input field  -->
+      <!-- <input type="text" placeholder="Search" class="search-input" [(ngModel)]="searchTerm" (input)="search()"> -->
+    </div>
+    <!-- Table -->
+    <table class="custom-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Dynamic rows -->
+        <tr *ngFor="let item of filteredData">
+          <td>{{ item.id }}</td>
+          <td>{{ item.name }}</td>
+        </tr>
+        <tr *ngIf="filteredData.length === 0">
+          <td colspan="2">Data not found</td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- Buttons -->
+    <div class="button-bar">
+      <button class="right-cancle" (click)="cancel()">Cancel</button>
+      <button class="right-button" (click)="apply()">Apply</button>
+    </div>
+  </div>
+</div>

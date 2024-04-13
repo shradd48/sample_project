@@ -1,0 +1,35 @@
+<div class="module-container" *ngIf="isOpen">
+  <div class="table-container">
+    <div class="title-bar">Table Heading
+      <button class="close-button" (click)="closeModal()"><i class="fa fa-close"></i></button>
+    </div>
+    <table class="custom-table">
+      <thead>
+        <tr class="checkbox-row">
+          <th class="title-row"></th>
+          <th>ID</th>
+          <th>UserName</th>
+          <th>Name</th>
+          <th>Email-Id</th>
+          <th>Phone</th>
+          <th>Website</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Use *ngFor to dynamically generate rows -->
+
+        <tr *ngFor="let item of filteredData" [class.selected-row]="isSelected(item)">
+          <td class="checkbox-column"><input type="checkbox" class="largebox" (click)="toggleRow(item)"></td>
+          <td>{{item.id}}</td>
+          <td>{{item.username}}</td>
+          <td>{{item.name}}</td>
+          <td>{{item.email}}</td>
+          <td>{{item.phone}}</td>
+          <td>{{item.website}}</td>
+
+        </tr>
+        <!-- Add more rows as needed -->
+      </tbody>
+    </table>
+  </div>
+</div>

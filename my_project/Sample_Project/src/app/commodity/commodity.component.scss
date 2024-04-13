@@ -1,0 +1,124 @@
+@import '../../colour-code.scss';
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $blur;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  padding: 20px;
+  width: 400px;
+}
+
+.title-bar {
+  background-color: $gray;
+  color: $darkblue;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  color: $darkblue;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.search-bar {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position: relative;
+
+  .fa-search {
+    position: absolute;
+    color: $gray;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .search-input {
+    height: 40px;
+    width: 100%;
+    padding: 5px 10px;
+    border: 1px solid $gray;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding-left: 30px;
+  }
+}
+
+.custom-table {
+  color: $dark-gray;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 10px;
+
+  th,
+  td {
+    border: 1px solid $light-gray;
+    text-align: center;
+    padding: 10px;
+  }
+}
+
+.checkbox-bar {
+  margin-top: 0;
+  margin-bottom: 10px;
+  background-color: $blue;
+  color: $white;
+  padding: 10px;
+  font-weight: bold;
+  position: relative;
+
+  input[type="checkbox"] {
+    margin-right: 5px;
+    height: 16px;
+    width: 20px;
+  }
+}
+
+.button-bar {
+  align-self: flex-end;
+  background-color: $light-gray;
+  margin-top: 10px;
+
+  .right-button {
+    font-size: 18px;
+    border: 0;
+    width: 100px;
+    height: 35px;
+    margin-left: 10px;
+    background-color: $blue;
+    color: $white;
+  }
+
+  .right-cancle {
+    font-size: 18px;
+    border: 0;
+    width: 100px;
+    height: 35px;
+    margin-left: 10px;
+    background-color: $dark-gray;
+    color: $white;
+  }
+}
